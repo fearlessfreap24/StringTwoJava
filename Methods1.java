@@ -111,10 +111,54 @@ public class Methods1 {
 //		xyzThere("xyz.abc") → true
 
 		boolean xyzthere = false;
+		if ( str.length() == 3 && str.contains("xyz") ) return true;
 		for ( int i = 0; i < str.length() - 3; i++ ){
 			String sub3 = str.substring(i, i+4);
-			xyzthere = sub3.contains("xyz") && !sub3.equals(".xyz");
+			if ( sub3.contains("xyz") ) {
+				xyzthere = true;
+				if ( sub3.contains(".xyz") ) xyzthere = false;
+			}
 		}
 		return xyzthere;
+	}
+
+	public boolean bobThere(String str) {
+
+//		Return true if the given string contains a "bob" string, but where the middle 
+//		'o' char can be any char.
+//
+//		bobThere("abcbob") → true
+//		bobThere("b9b") → true
+//		bobThere("bac") → false
+		
+		if ( str.length() < 2 ) return false;
+//		if ( str.length() == 3 ) {
+//			return str.substring(0, 1).equals("b") && str.substring(2).equals("b");
+//		}
+		for ( int i = 0; i < str.length() - 2; i++ ) {
+			String sub3 = str.substring(i, i+3);
+			if ( sub3.substring(0,1).equals("b") && sub3.substring(2).equals("b") ) return true;
+		}
+		return false;
+	}
+
+	public boolean xyBalance(String str) {
+
+//		We'll say that a String is xy-balanced if for all the 'x' chars in the string, there 
+//		exists a 'y' char somewhere later in the string. So "xxy" is balanced, but "xyx" is 
+//		not. One 'y' can balance multiple 'x's. Return true if the given string is xy-balanced.
+//
+//		xyBalance("aaxbby") → true
+//		xyBalance("aaxbb") → false
+//		xyBalance("yaaxbb") → false
+		
+		String[] splitStr = str.split("");
+		int xCount = 0;
+		int yCount = 0;
+		for ( int i = 0; i < splitStr.length; i++ ) {
+			if ( splitStr[i].equals("x") ) xCount = i+1;
+			if ( splitStr[i].equals("y") ) yCount = i+1;
+		}
+		return xCount <= yCount;
 	}
 }

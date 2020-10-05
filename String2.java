@@ -35,9 +35,19 @@ public class String2 {
 //					m1.endOther(strs[0], strs[1]));
 //		}
 
-		String[] strs6 = { "abcxyz", "abc.xyz", "xyz.abc", "abc.xyzxyz" };
-		for ( String str : strs6 ){
-			System.out.printf("str = %s : %b\n", str, m1.xyzThere(str));
+//		String[] strs6 = { "abcxyz", "abc.xyz", "xyz.abc", "abc.xyzxyz", "xyz" };
+//		for ( String str : strs6 ){
+//			System.out.printf("str = %s : %b\n", str, m1.xyzThere(str));
+//		}
+		
+//		String[] strs7 = { "abcbob", "b9b", "bac", "b12b1b" };
+//		for ( String str : strs7 ) {
+//			System.out.printf("str = %s : %b\n", str, m1.bobThere(str));
+//		}
+		
+		String[] strs8 = { "aaxbby", "aaxbb", "yaaxbb", "yaaxbby", "yxyxyxyxy", "x" };
+		for ( String str : strs8 ) {
+			System.out.printf("str = %s : %b\n", str, m1.xyBalance(str));
 		}
 		
 		
