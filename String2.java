@@ -19,9 +19,25 @@ public class String2 {
 //			System.out.printf("str = %s : %d\n", str, m1.countHi(str));
 //		}
 		
-		String[] strs3 = { "catdog", "catcat", "1cat1cadodog" };
-		for ( String str : strs3 ) {
-			System.out.printf("str = %s : %b\n", str, m1.catDog(str));
+//		String[] strs3 = { "catdog", "catcat", "1cat1cadodog" };
+//		for ( String str : strs3 ) {
+//			System.out.printf("str = %s : %b\n", str, m1.catDog(str));
+//		}
+
+//		String[] strs4 = { "aaacodebbb", "codexxcode", "cozexxcope" };
+//		for ( String str : strs4 ){
+//			System.out.printf("str = %s : %d\n", str, m1.countCode(str));
+//		}
+
+//		String[][] strs5 = { {"Hiabc", "abc"}, {"AbC", "HiaBc"}, {"abc", "abXabc"} };
+//		for ( String[] strs : strs5 ){
+//			System.out.printf("a = %s, b = %s : %b\n", strs[0], strs[1],
+//					m1.endOther(strs[0], strs[1]));
+//		}
+
+		String[] strs6 = { "abcxyz", "abc.xyz", "xyz.abc", "abc.xyzxyz" };
+		for ( String str : strs6 ){
+			System.out.printf("str = %s : %b\n", str, m1.xyzThere(str));
 		}
 		
 		
