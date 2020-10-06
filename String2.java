@@ -45,9 +45,58 @@ public class String2 {
 //			System.out.printf("str = %s : %b\n", str, m1.bobThere(str));
 //		}
 		
-		String[] strs8 = { "aaxbby", "aaxbb", "yaaxbb", "yaaxbby", "yxyxyxyxy", "x" };
-		for ( String str : strs8 ) {
-			System.out.printf("str = %s : %b\n", str, m1.xyBalance(str));
+//		String[] strs8 = { "aaxbby", "aaxbb", "yaaxbb", "yaaxbby", "yxyxyxyxy", "x" };
+//		for ( String str : strs8 ) {
+//			System.out.printf("str = %s : %b\n", str, m1.xyBalance(str));
+//		}
+		
+//		String[][] strs9 = { {"abc", "xyz"}, {"Hi", "There"}, {"xxxx", "There"} };
+//		for ( String[] strs : strs9 ) {
+//			System.out.printf("a = %s, b = %s : %s\n", strs[0], strs[1],
+//					m1.mixString(strs[0], strs[1]));
+//		}
+		
+//		String[] strs10 = { "Hello", "Hello", "Hello" };
+//		int[] nums10 = { 3, 2, 1 };
+//		for ( int i = 0; i < strs10.length; i++ ) {
+//			System.out.printf("str = %s, n = %d : %s\n", strs10[i], nums10[i], 
+//					m1.repeatEnd(strs10[i], nums10[i]));
+//		}
+		
+//		String[] strs11 = { "Chocolate", "Chocolate", "Ice Cream" };
+//		int[] nums11 = { 4, 3, 2 };
+//		for ( int i = 0; i < nums11.length; i++ ) {
+//			System.out.printf("str = %s, n = %d : %s\n", strs11[i], nums11[i],
+//					m1.repeatFront(strs11[i], nums11[i]));
+//		}
+		
+//		String[][] strs12 = { {"Word", "X"}, {"This", "and"}, {"This", "and"}, {"AAA", ""}, {"AAA",""} };
+//		int [] nums12 = { 3, 2, 1, 1, 0 };
+//		for ( int i = 0; i < strs12.length; i++ ) {
+//			System.out.printf("word = %s, sep = %s, count = %d : %s\n", strs12[i][0], strs12[i][1], nums12[i],
+//					m1.repeatSeparator(strs12[i][0], strs12[i][1], nums12[i]));
+//		}
+		
+//		String[] strs13 = { "abXYabc", "abXYabc", "abXYabc" };
+//		int[] nums13 = { 1, 2, 3 };
+//		for ( int i = 0; i < strs13.length; i++ ) {
+//			System.out.printf("str = %s, n = %d : %b\n", strs13[i], nums13[i],
+//					m2.prefixAgain(strs13[i], nums13[i]));
+//		}
+		
+//		String[] strs14 = { "AAxyzBB", "AxyzBB", "AxyzBBB", "AAAxyzBB", "", "xy" };
+//		for ( String str : strs14 ) {
+//			System.out.printf("str = %s : %b\n", str, m2.xyzMiddle(str));
+//		}
+		
+//		String[] strs15 = { "breadjambread", "xxbreadjambreadyy", "xxbreadyy", "breadbreadbreadbread" };
+//		for ( String str : strs15 ) {
+//			System.out.printf("str = %s : %s\n", str, m2.getSandwich(str));
+//		}
+		
+		String[] strs16 = { "xy*yzz", "xy*zzz", "*xa*az", "", "*", "**", "abcDEF" };
+		for ( String str : strs16 ) {
+			System.out.printf("str = %s : %b\n", str, m2.sameStarChar(str));
 		}
 		
 		
