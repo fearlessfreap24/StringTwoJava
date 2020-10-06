@@ -78,12 +78,22 @@ public class Methods2 {
 //		found answer here : https://stackoverflow.com/questions/22443662/codingbat-samestarchar-exercise
 //		answer number 2
 		
+//		Since I copied this code, I'll explain how it works
+		
+//		loop over the letters in the word until the last one
 		for ( int i = 1; i < str.length() - 1; i++ ) {
+//			if the character at 'i' is a '*', check to see if the characters around it are the same.
 			if ( str.charAt(i) == '*' && str.charAt(i-1) != str.charAt(i+1) ) {
+//				if they aren't the same, return false
 				return false; 
 			}
 		}
+//		else, return true
 		return true;
+		
+//		my original code was similar to this. When I ran it, everything worked except for "abcDEF".
+//		There's no explanation that if there are no '*' that it should be true. That's why this code
+//		I found only checks if the characters around the start are not the same.
 	}
 
     public String oneTwo(String str) {
