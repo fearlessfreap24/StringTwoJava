@@ -94,9 +94,19 @@ public class String2 {
 //			System.out.printf("str = %s : %s\n", str, m2.getSandwich(str));
 //		}
 		
-		String[] strs16 = { "xy*yzz", "xy*zzz", "*xa*az", "", "*", "**", "abcDEF" };
-		for ( String str : strs16 ) {
-			System.out.printf("str = %s : %b\n", str, m2.sameStarChar(str));
+//		String[] strs16 = { "xy*yzz", "xy*zzz", "*xa*az", "", "*", "**", "abcDEF" };
+//		for ( String str : strs16 ) {
+//			System.out.printf("str = %s : %b\n", str, m2.sameStarChar(str));
+//		}
+
+//		String[] strs17 = { "abc", "tca", "tcagdo" };
+//		for ( String str : strs17 ){
+//			System.out.printf("str = %s : %s\n", str, m2.oneTwo(str));
+//		}
+
+		String[] strs18 = { "zipXzap", "zopzop", "zzzopzop", "abcppp", "azbcppp" };
+		for ( String str : strs18 ){
+			System.out.printf("str = %s : %s\n", str, m2.zipZap(str));
 		}
 		
 		

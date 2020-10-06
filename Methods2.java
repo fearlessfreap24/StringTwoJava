@@ -85,4 +85,54 @@ public class Methods2 {
 		}
 		return true;
 	}
+
+    public String oneTwo(String str) {
+
+//		Given a string, compute a new string by moving the first char to come after the next two chars,
+//		so "abc" yields "bca". Repeat this process for each subsequent group of 3 chars, so "abcdef"
+//		yields "bcaefd". Ignore any group of fewer than 3 chars at the end.
+//
+//		oneTwo("abc") → "bca"
+//		oneTwo("tca") → "cat"
+//		oneTwo("tcagdo") → "catdog"
+
+		String onetwo = "";
+		int strLenDiv3 = str.length() / 3;
+		for ( int i = 0; i < strLenDiv3; i++ ){
+			char one = str.substring(i*3).charAt(0);
+			char two = str.substring(i*3).charAt(1);
+			char three = str.substring(i*3).charAt(2);
+			onetwo = onetwo + two + three + one;
+		}
+		return onetwo;
+    }
+
+	public String zipZap(String str) {
+
+//		Look for patterns like "zip" and "zap" in the string -- length-3, starting with 'z' and ending
+//		with 'p'. Return a string where for all such words, the middle letter is gone, so "zipXzap"
+//		yields "zpXzp".
+//
+//		zipZap("zipXzap") → "zpXzp"
+//		zipZap("zopzop") → "zpzp"
+//		zipZap("zzzopzop") → "zzzpzp"
+
+		String zipzap = "";
+		if ( str.length() < 3 ) return str;
+		if ( str.length() == 3 && str.charAt(0) == 'z' && str.charAt(2) == 'p') return "zp";
+		if ( str.length() == 3 ) return str;
+		for ( int i = 0; i < str.length() - 2; i++ ){
+			char one = str.substring(i).charAt(0);
+			char three = str.substring(i).charAt(2);
+			if ( one == 'z' && three == 'p' ){
+				zipzap = zipzap + one + three;
+				i = i + 2;
+			}
+			else if ( i == str.length() - 3 && ( one != 'z' || three != 'p') ){
+				zipzap = zipzap + str.substring(i);
+			}
+			else zipzap = zipzap + str.charAt(i);
+		}
+		return zipzap;
+	}
 }
