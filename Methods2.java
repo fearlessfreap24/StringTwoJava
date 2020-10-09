@@ -169,11 +169,24 @@ public class Methods2 {
 	}
 
 	public String plusOut(String str, String word) {
+
+//		Given a string and a non-empty word string, return a version of the original String where
+//		all chars have been replaced by pluses ("+"), except for appearances of the word string
+//		which are preserved unchanged.
+//
+//		plusOut("12xy34", "xy") → "++xy++"
+//		plusOut("12xy34", "1") → "1+++++"
+//		plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
+		
 		String plusout = "";
+		int wordLen = word.length();
+		int difWordStr = str.length() - word.length();
 		for ( int i = 0; i < str.length() - word.length(); i++ ){
-			if ( str.substring(i, i+ word.length()).equals(word) ){
-				plusout += str.substring(i, i + word.length());
-				i += i + word.length();
+			if ( i >= difWordStr && i < wordLen ) plusout += '+';
+			if ( str.substring(i).indexOf(word) != 0 ) plusout += '+';
+			if ( str.substring(i).indexOf(word) == 0 ){
+				plusout += str.substring(i, i + wordLen );
+				i += wordLen;
 			}
 			else plusout += '+';
 		}
