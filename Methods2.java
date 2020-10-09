@@ -145,4 +145,38 @@ public class Methods2 {
 		}
 		return zipzap;
 	}
+
+	public String starOut(String str) {
+
+//		Return a version of the given string, where for every star (*) in the string the star and
+//		the chars immediately to its left and right are gone. So "ab*cd" yields "ad" and "ab**cd"
+//		also yields "ad".
+//
+//		starOut("ab*cd") → "ad"
+//		starOut("ab**cd") → "ad"
+//		starOut("sm*eilly") → "silly"
+
+		int length = str.length();
+		String starout = "";
+
+		for (int i = 0; i < length; i++) {
+			if (i == 0 && str.charAt(i) != '*') starout += str.charAt(i);
+			if (i > 0 && str.charAt(i) != '*' && str.charAt(i-1) != '*') starout += str.charAt(i);
+			if (i > 0 && str.charAt(i) == '*' && str.charAt(i-1) != '*') starout = starout.substring(0,starout.length()-1);
+		}
+		return starout;
+
+	}
+
+	public String plusOut(String str, String word) {
+		String plusout = "";
+		for ( int i = 0; i < str.length() - word.length(); i++ ){
+			if ( str.substring(i, i+ word.length()).equals(word) ){
+				plusout += str.substring(i, i + word.length());
+				i += i + word.length();
+			}
+			else plusout += '+';
+		}
+		return plusout;
+	}
 }

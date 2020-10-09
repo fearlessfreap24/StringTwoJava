@@ -104,9 +104,20 @@ public class String2 {
 //			System.out.printf("str = %s : %s\n", str, m2.oneTwo(str));
 //		}
 
-		String[] strs18 = { "zipXzap", "zopzop", "zzzopzop", "abcppp", "azbcppp" };
-		for ( String str : strs18 ){
-			System.out.printf("str = %s : %s\n", str, m2.zipZap(str));
+//		String[] strs18 = { "zipXzap", "zopzop", "zzzopzop", "abcppp", "azbcppp" };
+//		for ( String str : strs18 ){
+//			System.out.printf("str = %s : %s\n", str, m2.zipZap(str));
+//		}
+
+//		String[] strs19 = { "ab*cd", "ab**cd", "sm*eilly", "stringy*", "*stringy" };
+//		for ( String str : strs19 ) {
+//			System.out.printf("str = %s : %s\n", str, m2.starOut(str));
+//		}
+
+		String[][] strs20 = { {"12xy34", "xy"}, {"12xy34", "1"}, {"12xy34xyabcxy", "xy"} };
+		for ( String[] strs : strs20 ) {
+			System.out.printf("str = %s, word = %s : %s\n", strs[0], strs[1],
+					m2.plusOut(strs[0], strs[1]));
 		}
 		
 		
