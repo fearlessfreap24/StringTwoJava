@@ -114,10 +114,16 @@ public class String2 {
 //			System.out.printf("str = %s : %s\n", str, m2.starOut(str));
 //		}
 
-		String[][] strs20 = { {"12xy34", "xy"}, {"12xy34", "1"}, {"12xy34xyabcxy", "xy"} };
-		for ( String[] strs : strs20 ) {
+//		String[][] strs20 = { {"12xy34", "xy"}, {"12xy34", "1"}, {"12xy34xyabcxy", "xy"} };
+//		for ( String[] strs : strs20 ) {
+//			System.out.printf("str = %s, word = %s : %s\n", strs[0], strs[1],
+//					m2.plusOut(strs[0], strs[1]));
+//		}
+		
+		String[][] strs21 = { {"abc1xyz11", "1"}, {"abcXY123XYijk", "XY"}, {"XY123XY", "XY"}, {"XY1XY", "XY"} };
+		for ( String[] strs : strs21 ) {
 			System.out.printf("str = %s, word = %s : %s\n", strs[0], strs[1],
-					m2.plusOut(strs[0], strs[1]));
+					m2.wordEnds(strs[0], strs[1]));
 		}
 		
 		

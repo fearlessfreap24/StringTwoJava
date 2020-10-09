@@ -179,17 +179,45 @@ public class Methods2 {
 //		plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
 		
 		String plusout = "";
+		int strLen = str.length();
 		int wordLen = word.length();
-		int difWordStr = str.length() - word.length();
-		for ( int i = 0; i < str.length() - word.length(); i++ ){
-			if ( i >= difWordStr && i < wordLen ) plusout += '+';
-			if ( str.substring(i).indexOf(word) != 0 ) plusout += '+';
-			if ( str.substring(i).indexOf(word) == 0 ){
-				plusout += str.substring(i, i + wordLen );
-				i += wordLen;
+		for ( int i = 0; i < strLen; i++ ){
+			String subStr = str.substring(i);
+			int indexOfWord = subStr.indexOf(word);
+			if ( indexOfWord == 0 ){
+				plusout += subStr.substring(0, wordLen );
+				i += wordLen - 1;
 			}
 			else plusout += '+';
 		}
 		return plusout;
+	}
+
+	public String wordEnds(String str, String word) {
+
+//		Given a string and a non-empty word string, return a string made of each char just before and 
+//		just after every appearance of the word in the string. Ignore cases where there is no char 
+//		before or after the word, and a char may be included twice if it is between two words.
+//
+//		wordEnds("abcXY123XYijk", "XY") → "c13i"
+//		wordEnds("XY123XY", "XY") → "13"
+//		wordEnds("XY1XY", "XY") → "11"
+		
+		String wordends = "";
+		int wordLen = word.length();
+		
+		if ( str.indexOf(word) < 0 ) return wordends;
+		if ( str.equals(word) ) return wordends;
+
+		for ( int i = 0; i <= str.length(); i++ ) {
+			String subStr = str.substring(i);
+			int subLen = subStr.length();
+			int indexOfWord = subStr.indexOf(word);
+			if ( i > 0 && indexOfWord == 0 ) wordends += str.charAt(i -1);
+			if ( i + wordLen < str.length() && indexOfWord == 0 ) wordends += str.charAt(i + wordLen);
+			
+		}
+		
+		return wordends;
 	}
 }
